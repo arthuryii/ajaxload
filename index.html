@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cheat On Ajax Loader</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .indent {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>Ajax Loader Examples</h3>
+        </div>
+        <div class="panel-body">
+            <div class="list-group" id="list-gif">
+
+            </div>
+        </div>
+        <div class="panel-footer">
+            License MIT(我也没仔细看过，不过看起来挺高端的样子)
+        </div>
+    </div>
+    <script>
+        var names = ['Circle ball', 'Indicator', 'Kit', 'Arrows', 'Indicator Big', 'Snake', 'Bouncing ball', 'Bar', 'Bar 2', 'Bar 3', 'Circling ball', 'Hypnotize', 'Wheel', 'Expanding Circle', 'Radar', 'Refresh', 'Flower', 'Squares', 'Circle Thickbox', 'Big Roller', 'Wheel Throbber', 'Smallwait', '3D Rotation', 'Indicator lite', 'Squares Circle', 'Big Snake', 'Big Circle ball', 'Roller', 'Drip Circle', 'Indicator Big 2', 'Big Flower', 'Clock', 'Bar Circle', 'Pik', 'Pk', 'Bert', 'Bert2', 'Facebook', 'Pac-Man'];
+        var template = '<div class="list-group-item" data-value="1"><img src="http://www.ajaxload.info/images/exemples/[ID].gif" alt=[NAME]/><span class="text-info indent">[NAME]</span></div>'
+        var html = '';
+        for (var i = 0; i < names.length; i++) {
+            html += template.replace("[ID]", i + 1).replace("[NAME]", names[i]).replace("[NAME]", names[i]);
+        }
+        var list_element = document.getElementById('list-gif');
+        console.log(html);
+        list_element.innerHTML = html;
+    </script>
+</body>
+</html>
